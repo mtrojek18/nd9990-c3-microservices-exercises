@@ -15,7 +15,9 @@ before_script:
 
 script:
   - docker --version # print the version for logging
-  - cd lesson-3-independent-releases/exercises/travis_env_var_exercise/
+  #- docker build -t simple-node .   ORIGINAL
+  #- docker build -f /lesson-3-independent-releases/exercises/travis_ci -t simple-node .
+  - cd lesson-3-independent-releases/exercises/travis_ci/
   - docker build -t simple-node .
   - docker tag simple-node mtrojek18/simple-node:latest
 
