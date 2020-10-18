@@ -19,8 +19,8 @@ script:
   #- docker build -f /lesson-3-independent-releases/exercises/travis_ci -t simple-node .
   - cd lesson-3-independent-releases/exercises/travis_ci/
   - docker build -t simple-node .
-  - docker tag simple-node YOUR_DOCKER_HUB/simple-node:latest
+  - docker tag simple-node mtrojek18/simple-node:latest
 
 after_success:
   - echo "$DOCKER_PASSWORD" | docker login -u "$DOCKER_USERNAME" --password-stdin
-  - docker push YOUR_DOCKER_HUB/simple-node
+  - docker push mtrojek18/simple-node
