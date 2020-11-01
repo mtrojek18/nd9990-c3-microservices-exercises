@@ -1,0 +1,24 @@
+language: node_js
+node_js:
+  - 13
+
+services:
+  - docker
+
+# Pre-testing installs
+install:
+  - echo "nothing needs to be installed"
+
+# Scripts to be run such as tests
+before_script:
+  - echo "no tests"
+
+script:
+  - docker --version # print the version for logging
+  - cd lesson-3-independent-releases/exercises/travis_env_var_exercise/
+  - docker build -t simple-node .
+  - docker tag simple-node mtrojek18/simple-node:latest
+
+after_success:
+  - echo "$DOCKER_PASSWORD" | docker login -u "$DOCKER_USERNAME" --password-stdin
+  - docker push mtrojek18/simple-node
