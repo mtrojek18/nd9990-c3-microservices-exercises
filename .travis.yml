@@ -10,7 +10,10 @@ before_install:
   - sudo mv docker-compose /usr/local/bin
   - echo "$DOCKER_USERNAME"
   # set Docker username and password in Travis console
-  - curl -LO https://storage.googleapis.com/kubernetes-release/release/$(curl -s "$DOCKER_PASSWORD" | docker login -u "$DOCKER_USERNAME" --password-stdin 
+  # curl -LO https://storage.googleapis.com/kubernetes-release/release/$(curl -s "$DOCKER_PASSWORD" | docker login -u "$DOCKER_USERNAME" --password-stdin 
+  - curl -LO https://storage.googleapis.com/kubernetes-release/release/$(curl -s https://storage.googleapis.com/kubernetes-release/release/stable.txt)/bin/linux/amd64/kubectl
+  - chmod +x ./kubectl
+  - sudo mv ./kubectl /usr/local/bin/kubectl
   - echo 'dockerhub credentials configured'
 install:
   - docker-compose -f udagram-reverse-proxy/docker-compose-build.yaml build --parallel 
