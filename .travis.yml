@@ -16,5 +16,5 @@ before_install:
   - sudo mv ./kubectl /usr/local/bin/kubectl
   - echo 'dockerhub credentials configured'
 install:
-  - docker-compose -f udagram-reverse-proxy/docker-compose-build.yaml build --parallel 
-  - docker-compose -f udagram-reverse-proxy/docker-compose-build.yaml push
+  - docker-compose -f project/udagram-reverse-proxy/docker-compose-build.yaml build --parallel 
+  - docker-compose -f project/udagram-reverse-proxy/docker-compose-build.yaml push
