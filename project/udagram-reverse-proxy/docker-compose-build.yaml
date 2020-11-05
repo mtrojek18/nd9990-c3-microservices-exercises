@@ -3,16 +3,16 @@ services:
   reverseproxy:
     build:
       context: .
-    image: reverseproxy
+    image: mtrojek18/reverseproxy
   backend_user:
     build:
       context: ../../udagram-api-user
-    image: udagram-api-user
+    image: mtrojek18/udagram-api-user
   backend_feed:
     build:
       context: ../../udagram-api-feed
-    image: udagram-api-feed
+    image: mtrojek18udagram-api-feed
   frontend:
     build:
       context: ../../udagram-frontend
-    image: udagram-frontend:local
+    image: mtrojek18/udagram-frontend:local
