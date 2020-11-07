@@ -12,7 +12,7 @@ spec:
         service: reverseproxy
     spec:
       containers:
-      - image: mtrojek18/reverseproxy
+      - image: mtrojek18/udagram-reverse-proxy
         name: reverseproxy
         imagePullPolicy: Always
         resources:

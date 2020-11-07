@@ -15,7 +15,7 @@ spec:
         app: backend-feed
     spec:
       containers:
-      - image: mtrojek18/udacity-restapi-feed
+      - image: mtrojek18/udagram-api-feed
         name: backend-feed
         imagePullPolicy: Always  
         resources:

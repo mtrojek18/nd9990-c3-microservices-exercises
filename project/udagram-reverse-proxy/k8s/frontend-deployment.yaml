@@ -16,7 +16,7 @@ spec:
         api: external
     spec:
       containers:
-      - image: mtrojek18/udacity-frontend
+      - image: mtrojek18/udagram-frontend
         name: frontend
         imagePullPolicy: Always
         ports:

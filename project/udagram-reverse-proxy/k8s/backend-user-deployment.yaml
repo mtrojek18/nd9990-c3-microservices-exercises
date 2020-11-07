@@ -15,7 +15,7 @@ spec:
         app: backend-user
     spec:
       containers:
-      - image: mtrojek18/udacity-restapi-user
+      - image: mtrojek18/udagram-api-user
         name: backend-user 
         imagePullPolicy: Always  
         resources:
