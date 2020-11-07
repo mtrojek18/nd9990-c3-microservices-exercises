@@ -12,10 +12,10 @@ spec:
   template:
     metadata:
       labels:
-        service: backend-user
+        app: backend-user
     spec:
       containers:
-      - image: mtrojek18/udacity-user
+      - image: mtrojek18/udacity-restapi-user
         name: backend-user 
         imagePullPolicy: Always  
         resources:
