@@ -5,7 +5,10 @@ metadata:
     service: frontend
   name: frontend
 spec:
-  replicas: 1
+  replicas: 2
+  selector:
+    matchLabels:
+      service: frontend
   template:
     metadata:
       labels:
@@ -13,7 +16,7 @@ spec:
         api: external
     spec:
       containers:
-      - image: mtrojek18/udacity-frontend:local
+      - image: mtrojek18/udacity-frontend
         name: frontend
         imagePullPolicy: Always
         ports:
