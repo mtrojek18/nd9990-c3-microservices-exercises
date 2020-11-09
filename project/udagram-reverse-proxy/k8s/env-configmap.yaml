@@ -7,6 +7,7 @@ data:
   JWT_SECRET: hello
   POSTGRES_DB: postgres
   POSTGRES_HOST: udagram-monolith-project-dev.cnwdm0g6jvnh.us-east-2.rds.amazonaws.com
+  POSTGRES_DATABASE: postgrescls
   URL: http://localhost:8100  
 metadata:
   name: env-config
